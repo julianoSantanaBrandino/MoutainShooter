@@ -10,3 +10,4 @@ class Enemy(Entity):
 
     def move(self, ):
         pass
+
