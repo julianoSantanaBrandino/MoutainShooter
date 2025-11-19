@@ -4,6 +4,7 @@
 import pygame
 
 # Chamando o codigo Menu
+from code.const import WIN_WIDTH, WIN_HEIGHT
 from code.menu import Menu
 
 
@@ -13,18 +14,14 @@ class Game:
         pygame.init()
 
         # inicializa a janela que iria mostrar o jogo ou algum grafico
-        self.window = pygame.display.set_mode(size=(600, 480))
+        self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
 
     def run(self, ):
-        # Luping para manter a janela aberta
+
+        # LOOP para manter a janela aberta
         while True:
             menu = Menu(self.window)
             menu.run()
             pass
 
-            # Check para todos os evento
-        #    for event in pygame.event.get():
-        # evento de fechar janela clicando no "x"
-        #        if event.type == pygame.QUIT:
-        #            pygame.quit()  # Fechar janela
-        #           quit()  # End pygame
+
