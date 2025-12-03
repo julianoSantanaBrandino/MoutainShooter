@@ -26,9 +26,9 @@ class Menu:
             # Esta dizendo que a imagem vem do surf e o destino é o rect
             self.window.blit(source=self.surf, dest=self.rect)
             # Fazendo o menu
-            self.menu_text(text_size=50, text="Mountain", text_color=COLOR_ORANGE,
+            self.menu_text(text_size=50, text="Dragon", text_color=COLOR_ORANGE,
                            text_center_pos=((WIN_WIDTH / 2), 70))
-            self.menu_text(text_size=50, text="Shooter", text_color=COLOR_ORANGE,
+            self.menu_text(text_size=50, text="Fly", text_color=COLOR_ORANGE,
                            text_center_pos=((WIN_WIDTH / 2), 120))
 
             for i in range(len(MENU_OPTION)):
