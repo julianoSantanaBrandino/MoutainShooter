@@ -5,7 +5,7 @@ import sys
 
 import pygame
 from pygame import Surface, Rect
-from pygame.examples.aliens import Player
+from code.player import Player
 from pygame.font import Font
 
 from code.const import WIN_HEIGHT, COLOR_WHITE, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, COLOR_GREEN, COLOR_CYAN
@@ -48,6 +48,7 @@ class Level:
                     self.level_text(text_size=14, text=f"Player1 - health: {ent.health} | Score: {ent.score}",
                                     text_color=COLOR_GREEN,
                                     text_pos=(10, 25))
+                if ent.name == "Player2":
                     self.level_text(text_size=14, text=f"Player2 - health: {ent.health} | Score: {ent.score}",
                                     text_color=COLOR_CYAN,
                                     text_pos=(20, 45))
@@ -64,18 +65,18 @@ class Level:
             self.level_text(text_size=14, text=f"{self.name} - Timeout: {self.timeout / 100 :.1f}s",
                             text_color=COLOR_WHITE, text_pos=(10, 5))
             self.level_text(text_size=14, text=f"fps{clock.get_fps() :.0f}", text_color=COLOR_WHITE,
-                            text_pos=(10, WIN_HEIGHT, 20))
+                            text_pos=(10, WIN_HEIGHT - 20))
             self.level_text(text_size=14, text=f"entidades: {len(self.entity_list)}", text_color=COLOR_WHITE,
-                            text_pos=(10, WIN_HEIGHT, 20))
+                            text_pos=(10, WIN_HEIGHT- 20))
             pygame.display.flip()
 
             # collisions
             EntityMediator.verify_collision(entity_list=self.entity_list)
-            EntityMediator.verify_healt(entity_list=self.entity_list)
+            EntityMediator.verify_healtH(entity_list=self.entity_list)
         pass
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple, ):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter0", size=text_size)
-        text_surf: Surface = text_font.render(text, antialias=True, text_color).convert_alpha()
+        text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_react: Rect = text_surf.get_rect(left=text_pos[0], top=text_pos[1])
         self.window.blit(source=text_surf, dest=text_react)

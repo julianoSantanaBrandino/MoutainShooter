@@ -73,7 +73,7 @@ ENTITY_SCORE = {
     "Enemy2Shot": 0,
 }
 
-ENTITY_HEALT ={
+ENTITY_HEALTH ={
     "Level1Bg0": 999,
     "Level1Bg1": 999,
     "Level1Bg2": 999,
