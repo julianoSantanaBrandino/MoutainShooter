@@ -9,7 +9,26 @@ COLOR_YELLOW = (255, 255, 0)
 COLOR_WHIT = (255, 255, 255)
 COLOR_GREEN = (0, 128, 0)
 COLOR_CYAN = (0, 128, 128)
+COLOR_BLACK = (0, 0, 0)
+COLOR_BLUE = (0, 0, 255)
+COLOR_RED = (255, 0, 0)
+# c
+CONTROL = {
+    "Comandos player 1"
+    "Atirar - Barra de espaço"
+    "Mover para cima - Seta para cima"
+    "Mover para Baixo - Seta para baixo"
+    "Mover para direita - Seta para direita"
+    "Mover para esquerda - Seta para esquerda"
+    
+    "Comandos player 2"
+    "Atirar - Tecla Contron"
+    "Mover para cima - Tecla W"
+    "Mover para Baixo - Tecla S"
+    "Mover para direita - Tecla D"
+    "Mover para esquerda - Tecla A"
 
+}
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
 EVENT_TIMEOUT = pygame.USEREVENT + 2
@@ -101,7 +120,9 @@ MENU_OPTION = ("NEW GAME 1P",
                "NEW GAME 2P - COOPERATIVE",
                "NEW GAME 2P - COMPETITIVE",
                "SCORE",
-               "EXIT")
+               "CONTROLS",
+               "EXIT"
+               )
 
 # P
 PLAYER_KEY_UP = {"Player1": pygame.K_UP,
