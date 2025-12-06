@@ -40,9 +40,9 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
-                if isinstance(ent, (Player, Enemy)):
+                if isinstance(ent, Player):
                     shoot = ent.shoot()
-                    if shoot is not  None:
+                    if shoot is not None:
                         self.entity_list.append(shoot)
                 if ent.name == "Player1":
                     self.level_text(text_size=14, text=f"Player1 - health: {ent.health} | Score: {ent.score}",
@@ -64,15 +64,15 @@ class Level:
             # print Text
             self.level_text(text_size=14, text=f"{self.name} - Timeout: {self.timeout / 100 :.1f}s",
                             text_color=COLOR_WHITE, text_pos=(10, 5))
-            self.level_text(text_size=14, text=f"fps{clock.get_fps() :.0f}", text_color=COLOR_WHITE,
-                            text_pos=(10, WIN_HEIGHT - 20))
-            self.level_text(text_size=14, text=f"entidades: {len(self.entity_list)}", text_color=COLOR_WHITE,
-                            text_pos=(10, WIN_HEIGHT- 20))
+            #self.level_text(text_size=14, text=f"fps{clock.get_fps() :.0f}", text_color=COLOR_WHITE,
+            #                text_pos=(10, WIN_HEIGHT - 20))
+            #elf.level_text(text_size=14, text=f"entidades: {len(self.entity_list)}", text_color=COLOR_WHITE,
+            #              text_pos=(10, WIN_HEIGHT - 20))
             pygame.display.flip()
 
             # collisions
             EntityMediator.verify_collision(entity_list=self.entity_list)
-            EntityMediator.verify_healtH(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
         pass
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple, ):

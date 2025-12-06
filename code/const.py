@@ -24,12 +24,11 @@ ENTITY_SPEED = {
     "Level1Bg4": 5,
     "Player1": 3,
     "Player2": 3,
-    "Enemy1": 2,
-    "Enemy2": 1,
-    "Player1Shot": 1,
-    "Player2Shot": 1,
-    "Enemy1Shot": 2,
-    "Enemy2Shot": 1,
+    "Enemy1": 7,
+    "Enemy2": 6,
+    "Player1shoot": 5,
+    "Player2shoot": 5,
+
 }
 ENTITY_DAMAGE = {
     "Level1Bg0": 0,
@@ -37,19 +36,18 @@ ENTITY_DAMAGE = {
     "Level1Bg2": 0,
     "Level1Bg3": 0,
     "Level1Bg4": 0,
-    #"Level2Bg0": 0,
-    #"Level2Bg1": 0,
-    #"Level2Bg2": 0,
-    #"Level2Bg3": 0,
-    #"Level2Bg4": 0,
+    "Level2Bg0": 0,
+    "Level2Bg1": 0,
+    "Level2Bg2": 0,
+    "Level2Bg3": 0,
+    "Level2Bg4": 0,
     "Player1": 1,
     "Player2": 1,
-    "Player1Shot": 25,
-    "Player2Shot": 20,
+    "Player1shoot": 20,
+    "Player2shoot": 20,
     "Enemy1": 1,
     "Enemy2": 1,
-    "Enemy1Shot": 15,
-    "Enemy2Shot": 20,
+
 
 }
 ENTITY_SCORE = {
@@ -65,12 +63,12 @@ ENTITY_SCORE = {
     #"Level2Bg4": 0,
     "Player1": 0,
     "Player2": 0,
-    "Player1Shot": 0,
-    "Player2Shot": 0,
+    "Player1shoot": 0,
+    "Player2shoot": 0,
     "Enemy1": 100,
     "Enemy2": 125,
-    "Enemy1Shot": 0,
-    "Enemy2Shot": 0,
+    #"Enemy1Shot": 0,
+    #"Enemy2Shot": 0,
 }
 
 ENTITY_HEALTH ={
@@ -80,19 +78,19 @@ ENTITY_HEALTH ={
     "Level1Bg3": 999,
     "Level1Bg4": 999,
     "Player1": 300,
+    "Player1shoot": 1,
     "Player2": 300,
-    "Player1Shoot": 1,
-    "Player2Shoot": 1,
+    "Player2shoot": 1,
     "Enemy1": 50,
     "Enemy2": 60,
-    "Enemy1Shoot": 1,
-    "Enemy2Shoot": 1,
+    #"Enemy1Shoot": 1,
+    #"Enemy2Shoot": 1,
 }
 ENTITY_SHOOT_DELAY = {
     "Player1": 15,
     "Player2": 15,
-    "Enemy1": 100,
-    "Enemy2": 200,
+    "Enemy1": 50,
+    "Enemy2": 50,
 }
 # M
 MENU_OPTION = ("NEW GAME 1P",
@@ -114,9 +112,9 @@ PLAYER_KEY_LEFT = {"Player1": pygame.K_LEFT,
 PLAYER_KEY_RIGHT = {"Player1": pygame.K_RIGHT,
                     "Player2": pygame.K_d}
 
-PLAYER_KEY_SHOOT = {"Player1": pygame.K_RCTRL,
+PLAYER_KEY_SHOOT = {"Player1": pygame.K_SPACE,
                     "Player2": pygame.K_LCTRL}
 
 
 # s
-SPAWN_TIME = 4000
+SPAWN_TIME = 1000

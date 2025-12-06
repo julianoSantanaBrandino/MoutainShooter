@@ -13,7 +13,6 @@ class Player(Entity):
         super().__init__(name, postion)
         self.shoot_delay = ENTITY_SHOOT_DELAY[self.name]
 
-
     def move(self, ):
         pressed_key = pygame.key.get_pressed()
         if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 0:
